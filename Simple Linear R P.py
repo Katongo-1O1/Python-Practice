@@ -8,8 +8,8 @@ from sklearn.impute import SimpleImputer
 from sklearn.pipeline import make_pipeline
 import plotly.express as px
 
-
-df = pd.read_csv("housing.csv")
+data = "" #Location to csv file
+df = pd.read_csv(data)
 df.drop(columns="ocean_proximity", inplace=True)
 df.dropna(inplace=True)
 sns.heatmap(df.corr())
